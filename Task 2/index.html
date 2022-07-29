@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Example Atlas For Men Page">
+        <meta name="author" content="Raphael Ellul Falzon">
+        <title>Atlas For Men Task 2</title>
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/8e9a3d4679.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <!-- Font Style -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <main>
+            <div>
+                <div class="hero-image d-none d-md-block"></div>
+                <div class="container-fluid main-content">
+                    <div class="row d-flex pt-5 background">
+                        <div class="col-md-5 mt-4">
+                            <div class="row">
+                                <div class="col-5 px-0 pb-4">
+                                    <img src="images/logo.png" class="img-fluid" alt="Atlas For Men Logo">
+                                </div>
+                                <div class="col-7 my-auto">
+                                    <p class="mb-0 text-uppercase">Le spécialiste des</p>
+                                    <p class="text-uppercase fw-heavy-bold small-line-height">vêtements et accessoires outdoor</p>
+                                </div>
+                            </div>
+                            <h1 class="fw-heavy-bold display-4 text-center d-md-none d-md-block ">Je Commande<span class="d-block">ma Parka Antifroid !</span></h1>
+                            <div class="product-image-container d-flex justify-content-center mb-4">
+                                <img src="images/parka.png"
+                                    class="img-fluid product-image" alt="Parka product">
+                                <img src="images/sizes.png"
+                                    class="img-fluid ps-4 size-image" alt="4XL size sticker">
+                                <img src="images/parka-description-sticker.png"
+                                    class="img-fluid ps-4 description-sticker" alt="Stop wind, cold, rain sticker">
+                            </div>
+                            <p class="d-md-none d-md-block small-line-height text-center">Parka Québec Trip : Equipez-vous chaudement
+                                pour les grands espaces avec cette parka ! Taillée dans une toile microtech déperlante très performante, elle est entièrement ouatinée (3703 g/m2 env.) et doublée de maille polaire en haut (190 g/m2 env.) et d'un épais matelassage en bas, pour encore plus de chaleur. Pratique, sa capuche zippée est totalement amovible. Côté isolation, tout a été pensé : col montant doublé polaire, fermeture zippée sous patte pressionnée, poignets scratches, capuche et bas ajustables par cordon avec boutons stoppeurs. Enfin, elle compte 7 poches_très pratiques : 4 grandes
+                                poches à rabat pressionné, 1 poche zippée manche gauche et 2 poches intérieures. Etiquette tissée manche droite. 100% polyester. Hauteur dos : 83 cm env. pour la taille L. Lavage: en machine à 30°. Coloris : marine - Réf. : C3108
+                            </p>
+                            <button class="btn-reduce-text d-block d-md-none text-decoration-underline fw-bold float-end"><i class="fa fa-chevron-up me-1"></i>reduire</button>
+                        </div>
+                        <div class="col-md-2 d-flex align-content-md-end flex-wrap justify-content-center">
+                            <div class="clearfix">
+                                <div class="offer">
+                                    <div class="price">
+                                        <span class="amount">29</span>
+                                        <sup class="original-price">&euro;90</sup>
+                                        <sup class="discount-text">au lieu de</sup>
+                                        <sup class="discount-amount">&euro;99&euro;50</sup>
+                                        <span class="sub-text">j'économise 69&euro;69</span>
+                                        <span class="discount-percentage">-80<sup>%</sup></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex align-content-md-end flex-wrap mb-4 mt-0">
+                            <div class="container-fluid px-0 negative-margin-top">
+                                <h1 class="fw-heavy-bold d-block fs-2 text-center  d-none d-md-block ">Je Commande<span class="d-block">ma Parka Antifroid !</span></h1>
+                                <p class="text-md-thin d-none d-md-block ">Parka Antifroid : Equipez-vous chaudement pour les grands espaces
+                                    avec cette parka ! Tailleé dans une toile microtech déperlant très
+                                    performante, elle...
+                                </p>
+                                <button type="button" id="btn-modal" class="d-none d-md-block text-decoration-underline fw-bold">
+                                <i class="fa-solid fa-circle-info"></i>
+                                Voir la description détaillée
+                                </button>
+                                <p class="mb-1 mt-4">Je choisis ma taille:</p>
+                            </div>
+                            <!-- Modal -->
+                            <div id="details-modal">
+                                <div class="modal-content">
+                                    <div class="text-end">
+                                        <span id="btn-close-modal" class="fs-4">&times; Fermer</span>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="images/parka.png"
+                                            class="img-fluid ps-4 product-image" alt="Parka product">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal End -->
+                            <div class="container-fluid px-0 mt-1">
+                                <div class="d-flex flex-row">
+                                    <div class="col-md-3 col-4 justify-content-lg-center text-center"><button type="button" class="btn selection fw-bold">M</button></div>
+                                    <div class="col-md-3 col-4 justify-content-lg-center text-center"><button type="button" class="btn selection fw-bold">L</button></div>
+                                    <div class="col-md-3 col-4 justify-content-lg-center text-center"><button type="button" class="btn selection fw-bold">XL</button></div>
+                                </div>
+                                <div class="d-flex flex-row mt-1">
+                                    <div class="col-md-3 col-4 justify-content-lg-center text-center"><button type="button" class="btn selection fw-bold">XXL</button></div>
+                                    <div class="col-md-3 col-4 justify-content-lg-center text-center"><button type="button" class="btn selection fw-bold">XXXL</button></div>
+                                    <div class="col-md-3 col-4 justify-content-lg-center text-center"><button type="button" class="btn selection fw-bold">4XL</button></div>
+                                </div>
+                                <div class="row">
+                                    <form class="needs-validation col-6 col-md-4" novalidate>
+                                        <div class="d-flex flex-wrap py-3 mb-4">
+                                            <label for="quantity" class="form-label">Quantité*:</label>
+                                            <select class="form-select" id="quantity" required>
+                                                <option value="">1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                    <div class="col-6 col-md-8 mt-4">
+                                        <img src="images/tape-measure.png"
+                                            class="img-fluid mt-4" alt="sizing guide">
+                                        <p><a href="#" class="fw-bold text-uppercase text-decoration-none smaller-font"><i class="fa-solid fa-arrow-right-long me-2"></i>Guide De Tailles</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="personal-details">
+                <section class="container-fluid py-lg-5 py-3 d-flex justify-content-center">
+                    <div class="col-md-12">
+                        <!-- Form Section -->
+                        <h1 class="section-title shrink-text text-center text-uppercase mb-0 fs-1">Mes Informations <span class="fw-heavy-bold">personnelles</span></h1>
+                        <small class="fst-italic">&#42;Champs Obligatoires</small>
+                        <form class="needs-validation was-validated" novalidate>
+                            <div class="row g-3 mb-3 mt-1 pt-4">
+                                <div class="col-md-2">
+                                    <label for="title" class="form-label fw-heavy-bold">Civilité&#42;:</label>
+                                    <select class="form-select" id="title" required>
+                                        <option value="" selected>Monsieur</option>
+                                        <option>Madame</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="name" class="form-label fw-heavy-bold fs-6">Nom&#42;:</label>
+                                    <input type="text" class="form-control" id="name" placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Ce champ est requis!
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="lastname" class="form-label fw-heavy-bold">Prénom&#42;:</label>
+                                    <input type="text" class="form-control" id="lastname" placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Ce champ est requis!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-5">
+                                    <label for="email" class="form-label fw-heavy-bold">Email&#42;:</label>
+                                    <input type="email" class="form-control" id="email"  placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Ce champ est requis!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-2">
+                                    <label for="street-number" class="form-label fw-heavy-bold">N&#7506; de rue&#42;:</label>
+                                    <input type="text" class="form-control" id="street-number"  placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Ce champ est requis!
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <label for="street-address" class="form-label fw-heavy-bold">Nom de rue, voie&#42;:</label>
+                                    <input type="text" class="form-control" id="street-address"  placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Ce champ est requis!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-2">
+                                    <label for="post-code" class="form-label fw-heavy-bold">Code postal&#42;:</label>
+                                    <input type="text" class="form-control" id="post-code"  placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Ce champ est requis!
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="city" class="form-label fw-heavy-bold">Ville&#42;:</label>
+                                    <input type="text" class="form-control" id="city" placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Ce champ est requis!
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="country" class="form-label fw-heavy-bold">Pays&#42;:</label>
+                                    <input type="text" class="form-control" id="country" placeholder="" required>
+                                    <div class="invalid-feedback">
+                                        Ce champ est requis!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center text-md-start">
+                                <small class="d-md-flex">Plus d'informations sur notre<a href="#" class="text-decoration-underline d-block ms-md-1">Politique de donnés personnelles</a></small>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <!-- Items section -->
+                <section class="items">
+                    <div class="container-fluid py-4 d-flex justify-content-center">
+                        <div class="col-md-12">
+                            <h1 class="section-title shrink-text text-center text-uppercase fs-1 mt-4 mb-4">Mon <span class="fw-heavy-bold">Panier</span></h1>
+                            <ul class="ps-md-3 ps-0 mb-1">
+                                <li class="d-flex justify-content-between">
+                                    <p class="my-0 fs-3">La Parka Antifroid</p>
+                                    <p class="fw-heavy-bold fs-3">XX&euro;<sup>xx</sup></p>
+                                </li>
+                            </ul>
+                            <ul class="ps-md-3 ps-0 mb-1">
+                                <li class="d-flex justify-content-between">
+                                    <div class="row">
+                                        <p class="mb-0 mt-2 fs-2 fw-heavy-bold">Frais de livraison</p>
+                                        <small>(livraison standard 3 à 5 jours ouvrés avec Colis Privé <img src="images/colis-prive-icon.png" class="img-fluid img-xs" alt="Collis Prive Logo">)</small>
+                                    </div>
+                                    <span class="fw-heavy-bold fs-3">4&euro;50</span>
+                                </li>
+                                <li class="d-flex justify-content-between fw-heavy-bold fs-2 mt-4">
+                                    <p class="fw-heavy-bold fs-2 mb-0">TOTAL:</p>
+                                    <span>XX&euro;<sup>xx</sup></span>
+                                </li>
+                            </ul>
+                            <div class="form-check d-flex">
+                                <label class="form-check-label mb-0 order-1 fs-6" for="conditions-check-box">
+                                J'accepte les conditions génétales de vente
+                                </label>
+                                <input class="form-check-input ms-md-3 order-0 order-md-1 me-3" type="checkbox" value="" id="conditions-check-box">
+                            </div>
+                            <div class="ps-md-3 ps-0 row mb-4">
+                                <div class="col-md-6 ps-3">
+                                    <small><a href="#">voire les conditions</a></small>
+                                </div>
+                                <div class="col-md-6 d-flex justify-content-center justify-content-md-end mt-2">
+                                    <button class="btn btn-primary checkout fs-5 text-uppercase fw-heavy-bold mb-4" type="submit"><i class="fa-solid fa-cart-shopping fa-xs me-3 m-auto"></i>Je Paye</button>
+                                </div>
+                            </div>
+                            <div class="container-fluid pt-4">
+                                <p class="shrink-text text-center fs-2 fw-bold accent text-uppercase mb-4"><i class="fa-solid fa-circle-check me-2"></i>Votre inscription a bien été prise en compte</p>
+                                <div class="row d-flex justify-content-center align-items-center w-75 mx-auto mt-4">
+                                    <div class="col-md-4 col-6 text-center order-md-2">
+                                        <img src="images/satisfaction-guaranteed.png" class="img-fluid img-m shrink-image" alt="Satisfaction guarantee">
+                                        <div>
+                                            <p><span class="d-block">Garantie satisfait</span><span class="d-block">ou remboursé</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6 text-center order-md-3 pd">
+                                        <img src="images/lock.png" class="img-fluid img-m" alt="Security guarantee">
+                                        <div>
+                                            <p><span class="d-block">Paiement</span><span class="d-block">100% securise</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center order-md-1 pb-4 pb-md-0">
+                                        <img src="images/charte-qualite.png" class="img-fluid img-m" alt="Quality guarantee">
+                                        <img src="images/trust-ecommerce-europe.png" class="img-fluid img-m ms-2" alt="Trust Ecommerce Europe">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Reviews Section -->
+                <section class="reviews pt-4">
+                    <div class="container-fluid pt-4 px-0">
+                        <div class="d-flex flex-row justify-content-center flex-wrap">
+                            <div class="col-md-6 my-auto text-center">
+                                <h2 class="d-flex justify-content-end fs-4 text-uppercase shrink-text me-1">Nos clients nous font confiance</h2>
+                            </div>
+                            <div class="col-md-6 pt-md-0 pt-3">
+                                <img src="images/overall-rating.png" class="img-fluid ms-1" alt="Overall rating">
+                                <img src="images/trust-ecommerce-europe.png" class="img-fluid ms-2 img-m d-md-none" alt="Trust Ecommerce Europe">
+                            </div>
+                        </div>
+                        <div class="container-fluid pt-4 py-md-5">
+                            <ul class="ps-0 mb-0">
+                                <li class="pb-4 pb-md-0">
+                                    <div class="row">
+                                        <sup class="d-flex justify-content-end"><a href="#" class="d-none d-md-block"><i class="fa-solid fa-flag heavy-opaque"></i></a></sup>
+                                        <div class="col-md-2 text-center">
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <p class="text-center fw-bold">5 / 5</p>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <p class="text-md-start text-center">cela fait je ne sais combien d annes que je suis client et suis entièrement satisfait</p>
+                                            <div class="text-md-end text-center">
+                                                <p class="text-muted fst-italic mb-0">le 19/07/2018 par BERNARD M.
+                                                <p class="text-muted fst-italic">suite à une commande du 04/07/2018</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="pb-4 pb-md-0">
+                                    <div class="row">
+                                        <sup class="d-flex justify-content-end"><a href="#" class="d-none d-md-block"><i class="fa-solid fa-flag heavy-opaque"></i></a></sup>
+                                        <div class="col-md-2 text-center">
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <p class="text-center fw-bold">5 / 5</p>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <p class="text-md-start text-center">Très bien, sérieux et rapide</p>
+                                            <div class="text-md-end text-center">
+                                                <p class="text-muted fst-italic mb-0">le par MARIA M.
+                                                <p class="text-muted fst-italic">suite à une commande du 04/07/2018</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="pb-4 pb-md-0">
+                                    <div class="row">
+                                        <sup class="d-flex justify-content-end"><a href="#" class="d-none d-md-block"><i class="fa-solid fa-flag heavy-opaque"></i></a></sup>
+                                        <div class="col-md-2 text-center">
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <p class="text-center fw-bold">5 / 5</p>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <p class="text-md-start text-center">Parfait, qualité prix irréprochable, livraison rapide. Je recommande</p>
+                                            <div class="text-md-end text-center">
+                                                <p class="text-muted fst-italic mb-0">le 19/07/2018 par Daniel T.
+                                                <p class="text-muted fst-italic">suite à une commande du 03/07/2018</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Example Property Lettings Page">
+        <meta name="author" content="Raphael Ellul Falzon">
+        <title>Property Task 1</title>
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/8e9a3d4679.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <!-- Font Style -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <!-- Navigation -->
+            <nav class="row g-0 d-none d-xl-block">
+                <div class="nav top-nav container d-flex flex-wrap align-items-center pe-0 ">
+                    <div class="col-2 d-flex justify-content-start align-items-center">
+                        <p class="my-auto accented"><i class="fa-solid fa-user pe-2"></i><button type="button" class="btn-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Login/registration
+                            </button>
+                        </p>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content container">
+                                <div class="modal-header pb-0">
+                                    <h5 class="modal-title login-text" id="exampleModalLabel">Login</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-group">
+                                        <label for="usernameInput" class="form-label mb-3">Username</label>
+                                        <input type="text" class="form-control" placeholder="Username" id="usernameInput" aria-describedby="username">
+                                        <label for="passwordInput" class="form-label mb-3">Password</label>
+                                        <input type="password" class="form-control mb-3" placeholder="Password" id="passwordInput">
+                                        <diV class="row">
+                                            <button type="submit" class="mx-auto btn btn-primary btn-submit-login">Submit</button>
+                                        </diV>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Modal -->
+                    <div class="col-3 d-flex justify-content-between">
+                        <p class="my-auto"><i class="fa-solid fa-phone pe-2"></i>1-800-1234-567</p>
+                        <p class="my-auto"><i class="fa-solid fa-envelope-open pe-2"></i>info@demolink.org</p>
+                    </div>
+                    <div class="col-3 d-flex justify-content-end align-items-center">
+                        <p class="my-auto lightened">Professional realtor works for you</p>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end align-items-center">
+                        <ul class="nav top-nav col-md-4 justify-content-end align-items-center">
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-brands fa-vimeo-v"></i></a></li>
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-brands fa-google"></i></a></li>
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-solid fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <header class="d-none d-xl-block navbar-expand-md bg-white gx-0 row">
+                <nav class="navbar navbar-expand-lg" aria-label="Main Nav Bar">
+                    <div class="nav container nav-header">
+                        <div class="col-2 d-flex justify-content-start">
+                            <div class="col d-flex align-items-start">
+                                <i class="fa-solid fa-house-chimney fa-3x me-2 align-self-center mb-lg-1 accented"></i>
+                                <div class="align-self-center">
+                                    <p class="top-logo-text mb-0 fw-bold">Super</p>
+                                    <p class="top-logo-text mt-0 small-line-height accented fw-bold">Real Estate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse col-lg-8 my-lg-auto" id="navbarSupportedContent">
+                            <ul class="nav justify-content-between top-nav-bar flex-fill">
+                                <li class="nav-item">
+                                    <a class="nav-link active ps-0" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Elements</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#" id="features-dropdown" data-bs-toggle="dropdown" aria-expanded="false">Features</a>
+                                    <ul class="dropdown-menu" aria-labelledby="features-dropdown">
+                                        <li><a class="dropdown-item text-wrap" href="#">Header Center, Footer Dark</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Header Minimal, Footer Dark</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Header Corporate</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Header Corporate Default</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Header Hamburger Menu</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Footer Center Dark</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Footer Light</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Footer Widget Light</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Footer Widget Dark</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Extras</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Property Catalog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pages</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#" id="blog-dropdown" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+                                    <ul class="dropdown-menu" aria-labelledby="blog-dropdown">
+                                        <li><a class="dropdown-item text-wrap" href="#">Timeline</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Classic</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Left Sidebar</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Right Sidebar</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">No Sidebar</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">Masonry</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">2 Columns</a></li>
+                                        <li><a class="dropdown-item text-wrap" href="#">3 Columns</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Gallery</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-2 d-flex ali my-auto justify-content-end"><button id="submit-property-btn" class="btn btn-primary text-uppercase">submit property</button></div>
+                    </div>
+                </nav>
+            </header>
+            <!-- Hero Carousel -->
+            <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="">
+                    <div class="carousel-indicators align-items-center">
+                        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                </div>
+                <div class="hero carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/header-1.png" class="img-fluid hero-img">
+                                </div>
+                                <div class="container px-0 card-img-overlay text-white d-flex order-1 mb-3 align-items-end">
+                                    <div class="col-lg-6 pt-lg-1 justify-content-end title-text d-none d-xl-block">
+                                        <h1 class="fw-bold text-nowrap">1530-2 Liberty Ave 4</h1>
+                                        <p class="mt-4 fs-4">This is a 3 bedroom, 2.0 bathroom, multi family home. It is located at 1530 Liberty Ave Hillside.</p>
+                                        <div>
+                                            <p class="d-inline fw-bold fs-2">&dollar;309.00</p>
+                                            <span>/day</span>
+                                            <button class="d-block btn btn-primary hero-btn text-uppercase mt-4 mb-5">book now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/header-2.png" class="img-fluid hero-img">
+                                </div>
+                                <div class="container px-0 card-img-overlay text-white d-flex order-1 mb-3 align-items-end">
+                                    <div class="col-lg-6 pt-lg-1 justify-content-end title-text d-none d-xl-block">
+                                        <h1 class="fw-bold text-nowrap">1530-2 Liberty Ave 4</h1>
+                                        <p class="mt-4 fs-4">This is a 3 bedroom, 2.0 bathroom, multi family home. It is located at 1530 Liberty Ave Hillside.</p>
+                                        <div>
+                                            <p class="d-inline fw-bold fs-2">&dollar;309.00</p>
+                                            <span>/day</span>
+                                            <button class="d-block btn btn-primary hero-btn text-uppercase mt-4 mb-5">book now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="assets/images/header-3.png" class="img-fluid hero-img">
+                                </div>
+                                <div class="container px-0 card-img-overlay text-white d-flex order-1 mb-3 align-items-end">
+                                    <div class="col-lg-6 pt-lg-1 justify-content-end title-text d-none d-xl-block">
+                                        <h1 class="fw-bold text-nowrap">1530-2 Liberty Ave 4</h1>
+                                        <p class="mt-4 fs-4">This is a 3 bedroom, 2.0 bathroom, multi family home. It is located at 1530 Liberty Ave Hillside.</p>
+                                        <div>
+                                            <p class="d-inline fw-bold fs-2">&dollar;309.00</p>
+                                            <span>/day</span>
+                                            <button class="d-block btn btn-primary hero-btn text-uppercase mt-4 mb-5">book now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Carousel -->
+            <div class="search-parameters px-0 container position-relative">
+                <form class="bg-white p-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="fw-bold">Find your Home</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 text-center align-self-center">
+                            <div class="d-flex flex-wrap py-3 mb-4">
+                                <label for="keyword" class="form-label fw-heavy-bold fs-6">Keyword</label>
+                                <input type="text" class="form-control" id="keyword" placeholder="Any" value="">
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center align-self-center">
+                            <div class="d-flex flex-wrap py-3 mb-4">
+                                <label for="location" class="form-label">Location</label>
+                                <select class="form-select" id="location">
+                                    <option value="">Any</option>
+                                    <option>Birkirkara</option>
+                                    <option>Valletta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center align-self-center">
+                            <div class="d-flex flex-wrap py-3 mb-4">
+                                <label for="property-status" class="form-label">Property Status</label>
+                                <select class="form-select" id="property-status">
+                                    <option value="">Any</option>
+                                    <option>Newly Built</option>
+                                    <option>Refurbished</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center align-self-center">
+                            <div class="d-flex flex-wrap py-3 mb-4">
+                                <label for="property-type" class="form-label">Property Type</label>
+                                <select class="form-select" id="property-type">
+                                    <option value="">Any</option>
+                                    <option>Flat</option>
+                                    <option>Penthouse</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row align-items-end">
+                                <div class="col-6">
+                                    <div>
+                                        <label for="price-min" class="form-label">Price (USD)</label>
+                                        <input type="text" class="form-control" id="price-min" placeholder="100">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label for="price-max" class="form-label"></label>
+                                    <input type="text" class="form-control" id="price-max" placeholder="6000">
+                                </div>
+                            </div>
+                            <label for="price-range-max" class="form-label"></label>
+                            <label for="price-range-min" class="form-label"></label>
+                            <div class="position-relative py-3">
+                                <div id="price-slider-track" class="slider-track"></div>
+                                <input type="range" min="100" max="10000" value="100" id="price-range-min">
+                                <input type="range" min="100" max="10000" value="6000" id="price-range-max">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row align-items-end">
+                                <div class="col-6">
+                                    <div>
+                                        <label for="area-min" class="form-label">Area (Sq Ft)</label>
+                                        <input type="text" class="form-control" id="area-min" placeholder="1000">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label for="area-max" class="form-label"></label>
+                                    <input type="text" class="form-control" id="area-max" placeholder="20000">
+                                </div>
+                            </div>
+                            <label for="area-range-min" class="form-label"></label>
+                            <label for="area-range-max" class="form-label"></label>
+                            <div class="position-relative py-3">
+                                <div id="area-slider-track" class="slider-track"></div>
+                                <input type="range" min="1000" max="25000" value="1000" id="area-range-min">
+                                <input type="range" min="1000" max="25000" value="20000" id="area-range-max">
+                            </div>
+                            <!-- <input type="range" class="form-range" id="price-range-max" value="10" min="0" max="100" step="1">
+                                <input type="range" class="form-range" id="price-range-min" value="10" min="0" max="100" step="1"> -->
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row align-items-end">
+                                <div class="col-xl-3 col-6">
+                                    <div class="d-flex flex-wrap">
+                                        <label for="min-beds" class="form-label">Min Beds</label>
+                                        <select class="form-select" id="min-beds">
+                                            <option value="">Any</option>
+                                            <option>Flat</option>
+                                            <option>Penthouse</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-6">
+                                    <div class="d-flex flex-wrap">
+                                        <label for="min-baths" class="form-label">Min Baths</label>
+                                        <select class="form-select" id="min-baths">
+                                            <option value="">Any</option>
+                                            <option>Flat</option>
+                                            <option>Penthouse</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <button class="btn btn-primary text-uppercase mt-4">search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mt-4 col d-flex justify-content-start in">
+                            <a class="" data-bs-toggle="collapse" href="#extra-features" role="button" aria-expanded="false" aria-controls="extra-features">
+                            <i class="accented fa-solid fa-plus me-3"></i></a>
+                            <p class="accented">Looking for certain features</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="collapse in" id="extra-features">
+                            <div class="card-body">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="central-heating-checkbox">
+                                        <label class="form-check-label" for="central-heating-checkbox">
+                                        Central Heating
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="hurricane-shutters-checkbox">
+                                        <label class="form-check-label" for="hurricane-shutters-checkbox">
+                                        Hurricane Shutters
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="air-conditioning-checkbox">
+                                        <label class="form-check-label" for="air-conditioning-checkbox">
+                                        Air Conditioning
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="penthouse-checkbox">
+                                        <label class="form-check-label" for="penthouse-checkbox">
+                                        Penthouses
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- End Form -->
+            <!-- Categories -->
+            <section class="container col-10 mt-5 pb-4">
+                <div class="text-center text-md-start">
+                    <h1 class="text-center text-md-start section-heading py-4">Categories</h1>
+                </div>
+                <div class="row py-5">
+                    <div class="col-lg-4">
+                        <div class="card text-white">
+                            <img src="assets/images/studio-apartments.png" class="card-img opacity-25" alt="...">
+                            <div class="card-img-overlay d-flex flex-column-reverse">
+                                <h5 class="categories card-title order-1">Studio Apartments</h5>
+                                <p class="card-text order-0">42 properties</p>
+                            </div>
+                        </div>
+                        <div class="card text-white my-4">
+                            <img src="assets/images/luxury-houses.png" class="card-img" alt="...">
+                            <div class="categories card-img-overlay d-flex flex-column-reverse">
+                                <h5 class="card-title order-1">Luxury Houses</h5>
+                                <p class="card-text order-0">42 properties</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-2">
+                        <div class="card text-white">
+                            <img src="assets/images/plus-1-bedroom-apartments.png" class="card-img" alt="...">
+                            <div class="categories card-img-overlay d-flex flex-column-reverse">
+                                <h5 class="card-title order-1">+1 Bedroom Apartments</h5>
+                                <p class="card-text order-0">42 properties</p>
+                            </div>
+                        </div>
+                        <div class="card text-white my-4">
+                            <img src="assets/images/cozy-houses.png" class="card-img" alt="...">
+                            <div class="categories card-img-overlay d-flex flex-column-reverse">
+                                <h5 class="card-title order-1">Cozy Houses</h5>
+                                <p class="card-text order-0">42 properties</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-1">
+                        <div class="card flex-row text-white center-card">
+                            <img src="assets/images/with-swimming-pool.png" class="card-img img-cover" alt="...">
+                            <div class="categories card-img-overlay d-flex flex-column-reverse">
+                                <h5 class="card-title order-1">With Swimming Pool</h5>
+                                <p class="card-text order-0">42 properties</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="bg-white">
+                <div class="container col-lg-10">
+                    <!-- End Categories -->
+                    <!-- Recent Properties -->
+                    <section class="recent-properties py-5 mt-5">
+                        <div class="text-center text-md-start">
+                            <h1 class="section-heading pt-4 pb-4">Recent Properties</h1>
+                        </div>
+                        <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 pt-5">
+                            <div class="col">
+                                <div class="properties card">
+                                    <img src="assets/images/property-1.png" class="card-img-top" alt="...">
+                                    <div class="card-body property-card ps-lg-0">
+                                        <h5 class="property-cost-indicator py-1 px-2 float-end">&dollar;4,339.00/mon</h5>
+                                        <h5 class="card-title fs-4 fw-bold mb-4">Building: 123 on the Park</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/sqft-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">1200 sq ft</p>
+                                                </div>
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/bathrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 bathrooms</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/bedrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">4 bedrooms</p>
+                                                </div>
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/garages-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 garages</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="card-text">Introducing Brooklyn's most uniue and genteel address. 123 on the Park is a stately, one of a kind rental directly overlooking Brooklyn Prospect Park</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="properties card">
+                                    <img src="assets/images/property-3.png" class="card-img-top" alt="...">
+                                    <div class="card-body property-card ps-lg-0">
+                                        <h5 class="property-cost-indicator py-1 px-2 float-end">&dollar;2,239.00/mon</h5>
+                                        <h5 class="card-title fs-4 fw-bold mb-4">225 Maywood Dr, San Francisco, CA 94127</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/sqft-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">1200 sq ft</p>
+                                                </div>
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/bathrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 bathrooms</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/bedrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">4 bedrooms</p>
+                                                </div>
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/garages-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 garages</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="card-text">One of the original homes built at Ocean Beach</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="properties card">
+                                    <img src="assets/images/property-4.png" class="card-img-top" alt="...">
+                                    <div class="card-body property-card ps-lg-0">
+                                        <h5 class="property-cost-indicator py-1 px-2 float-end">&dollar;2,229.00/mon</h5>
+                                        <h5 class="card-title fs-4 fw-bold mb-4">2266 48th Ave</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/sqft-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">1200 sq ft</p>
+                                                </div>
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/bathrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 bathrooms</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/bedrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">4 bedrooms</p>
+                                                </div>
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/garages-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 garages</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="card-text">Classic architectural detail, truly superb floor plan & strong upside potential for the next steward to restore this forever home to greatness.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="properties card">
+                                    <img src="assets/images/property-2.png" class="card-img-top" alt="...">
+                                    <div class="card-body property-card ps-lg-0">
+                                        <h5 class="property-cost-indicator py-1 px-2 float-end">&dollar;4,339.00/mon</h5>
+                                        <h5 class="card-title fs-4 fw-bold mb-4">1336 N Occidental Blvd</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/sqft-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">1200 sq ft</p>
+                                                </div>
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/bathrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 bathrooms</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/bedrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">4 bedrooms</p>
+                                                </div>
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/garages-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 garages</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="card-text">Located in the heart of Silver Lake, this magnificently re-imagine Spanish bungalow is not to be missed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="properties card">
+                                    <img src="assets/images/property-5.png" class="card-img-top" alt="...">
+                                    <div class="card-body property-card ps-lg-0">
+                                        <h5 class="property-cost-indicator py-1 px-2 float-end">&dollar;1,339.00/mon</h5>
+                                        <h5 class="card-title fs-4 fw-bold mb-4">2266 48th Ave</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/sqft-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">1200 sq ft</p>
+                                                </div>
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/bathrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 bathrooms</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/bedrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">4 bedrooms</p>
+                                                </div>
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/garages-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 garages</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="card-text">Front-facing,single level,well-designed floor plan. Secure building in a highly DESIRABLE location!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="properties card">
+                                    <img src="assets/images/property-6.png" class="card-img-top" alt="...">
+                                    <div class="card-body property-card ps-lg-0">
+                                        <h5 class="property-cost-indicator py-1 px-2 float-end">&dollar;1,339.00/mon</h5>
+                                        <h5 class="card-title fs-4 fw-bold mb-4">1735 N Fuller Ave #124</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/sqft-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">1200 sq ft</p>
+                                                </div>
+                                                <div class="d-flex mb-3">
+                                                    <img src="assets/images/bathrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 bathrooms</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/bedrooms-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">4 bedrooms</p>
+                                                </div>
+                                                <div class="d-flex  mb-3">
+                                                    <img src="assets/images/garages-icon.png" class="contain">
+                                                    <p class="my-auto ms-2">2 garages</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="card-text">This charming 2 bed and bath townhome has been beautifully renovated and ready for its next owners.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row col-12 col-lg-3">
+                            <div class="col d-flex my-5">
+                                <button class="btn btn-primary mobile-button text-uppercase fw-bold">View All Properties</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- End Recent Properties -->
+            <!-- Start Advantages -->
+            <div class="advantages">
+                <div class="container ps-lg-0 pe-lg-0 col-lg-10">
+                    <section class="container pt-5">
+                        <div class="text-center text-md-start">
+                            <h1 class="text-center text-md-start text-white section-heading py-4">Our Advantages</h1>
+                        </div>
+                        <div class="row row-cols-1 row-cols-lg-2 pb-lg-5 pt-4">
+                            <div class="col d-flex justify-content-center text-md-start text-center align-items-md-start flex-wrap flex-md-nowrap mt-4">
+                                <div class="red-circle me-md-4">
+                                    <div class="relative-container">
+                                        <span class="pin"><img src="assets/images/pin.png" class=""></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 class="text-white">Various Locations</h2>
+                                    <p class="text-white">Search by state then by city to find an apartment overlooking the lake in Chicago, within walking distance of the beach in Los Angeles or in the heart of Atlanta.</p>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-center text-md-start text-center align-items-md-start flex-wrap flex-md-nowrap mt-4">
+                                <div class="red-circle me-md-4">
+                                    <div class="relative-container">
+                                        <span class="camera"><img src="assets/images/camera.png"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 class="text-white">View Apartments</h2>
+                                    <p class="text-white">View apartment listings with photos, HD videos, InsideView virtual tours, 3D floor plans, and more, while also choosing the apartment and community features that you want.</p>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-center text-md-start text-center align-items-md-start flex-wrap flex-md-nowrap mt-4">
+                                <div class="red-circle me-md-4">
+                                    <div class="relative-container">
+                                        <span class="lock"><img src="assets/images/lock.png"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 class="text-white">Privacy and Security</h2>
+                                    <p class="text-white">Renters insurance helps keep your belongings secure, whether they're on your desk, under your couch, or in some cases, even in your car's glove box.</p>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-center text-md-start text-center align-items-md-start flex-wrap flex-md-nowrap mt-4">
+                                <div class="red-circle me-md-4">
+                                    <div class="relative-container">
+                                        <span class="dollar"><img src="assets/images/dollar.png"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 class="text-white">No Commission</h2>
+                                    <p class="text-white">You will therefore appreciate this opportunity to acquire a high-quality apartment for rent without having to pay any commission to our real estate agency.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End advantages -->
+                </div>
+                <!-- Start Staff Section -->
+                <section class="staff pt-4">
+                    <div class="row mx-auto my-auto justify-content-center">
+                        <div id="staffCarousel" class="staff carousel slide px-0" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="assets/images/staff-1.png" class="carousel-img img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay text-white d-flex flex-column-reverse order-1 mb-3">
+                                                <h3 class="fs-4">Michelle Nelson</h3>
+                                            </div>
+                                            <div class="card-img-overlay text-white d-flex flex-column-reverse order-0 mb-2"><small>Realtor</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="assets/images/staff-2.png" class="carousel-img img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay text-white d-flex flex-column-reverse order-1 mb-3">
+                                                <h3 class="fs-4">Brandon Miller</h3>
+                                            </div>
+                                            <div class="card-img-overlay text-white d-flex flex-column-reverse order-0 mb-2"><small>Manager</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="assets/images/staff-3.png" class="carousel-img img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay text-white d-flex flex-column-reverse order-1 mb-3">
+                                                <h3 class="fs-4">Christina Harvey</h3>
+                                            </div>
+                                            <div class="card-img-overlay text-white d-flex flex-column-reverse order-0 mb-2"><small>Realtor</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="assets/images/staff-4.png"  class="carousel-img img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay text-white d-flex flex-column-reverse order-1 mb-3">
+                                                <h3 class="fs-4">Carolyn Stone</h3>
+                                            </div>
+                                            <div class="card-img-overlay text-white d-flex flex-column-reverse order-0 mb-2"><small>Realtor</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-md-3">
+                                        <div class="card">
+                                            <div class="card-img">
+                                                <img src="assets/images/staff-5.png" class="carousel-img img-fluid">
+                                            </div>
+                                            <div class="card-img-overlay text-white d-flex flex-column-reverse order-1 mb-3">
+                                                <h3 class="fs-4">Brandon Miller</h3>
+                                            </div>
+                                            <div class="card-img-overlay text-white d-flex flex-column-reverse order-0 mb-2"><small>Manager</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev bg-transparent w-aut" href="#staffCarousel" role="button" data-bs-slide="prev">
+                            <span><i class="fa-solid fa-chevron-left fa-3x"></i></span>
+                            </a>
+                            <a class="carousel-control-next bg-transparent w-aut" href="#staffCarousel" role="button" data-bs-slide="next">
+                            <span><i class="fa-solid fa-chevron-right fa-3x"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <div class="bg-white">
+                    <div class="container ps-lg-0 pe-lg-0 col-lg-10">
+                        <section class="container py-lg-5 ps-lg-0 pe-lg-0">
+                            <div class="text-center text-md-start">
+                                <h1 class="text-center text-md-start section-heading py-4">Testimonials</h1>
+                            </div>
+                            <!-- Carousel -->
+                            <div id="testimonials-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                                <div class="carousel-indicators align-items-center">
+                                    <button type="button" data-bs-target="#testimonials-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#testimonials-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#testimonials-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="hero carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <div class="col-12">
+                                            <div class="card mb-5">
+                                                <div class="container mt-5 mb-5">
+                                                    <div class="row">
+                                                        <div class="col-md-4 px-0">
+                                                            <div class="card text-center">
+                                                                <div class="row d-flex">
+                                                                    <div class="user-image text-lg-start ps-3 col-2 px-0">
+                                                                        <img src="assets/images/testimonial-1.png" class="rounded-circle" width="40">
+                                                                    </div>
+                                                                    <h3 class="col-9 d-flex align-items-center fw-bold slightly-larger-font">Laura Russell</h3>
+                                                                </div>
+                                                                <div class="user-content">
+                                                                    <p class="text-start fst-italic pt-3">Thanks a lot for the quick response. i was really impressed, your solution is excellent!! Your competence is justified!</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 px-0">
+                                                            <div class="card text-center">
+                                                                <div class="row d-flex">
+                                                                    <div class="user-image text-lg-start ps-3 col-2 px-0">
+                                                                        <img src="assets/images/testimonial-2.png" class="rounded-circle" width="40">
+                                                                    </div>
+                                                                    <h3 class="col-9 d-flex align-items-center fw-bold slightly-larger-font">Richard Santos</h3>
+                                                                </div>
+                                                                <div class="user-content">
+                                                                    <p class="text-start fst-italic pt-3">I just don't know how to describe your services... They are extraordinary! I am quire happy with them! Just keep up going this way!</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 px-0">
+                                                            <div class="card text-center">
+                                                                <div class="row d-flex">
+                                                                    <div class="user-image text-lg-start ps-3 col-2 px-0">
+                                                                        <img src="assets/images/testimonial-3.png" class="rounded-circle" width="40">
+                                                                    </div>
+                                                                    <h3 class="col-9 d-flex align-items-center fw-bold slightly-larger-font">Dylan Medina</h3>
+                                                                </div>
+                                                                <div class="user-content">
+                                                                    <p class="text-start fst-italic pt-3">Thank you very much. I’m impressed with your service. I’ve already told my friends about your company and your quick response, thanks again!</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-12">
+                                            <div class="card mb-5">
+                                                <div class="container mt-5 mb-5">
+                                                    <div class="row">
+                                                        <div class="col-md-4 px-0">
+                                                            <div class="card text-center">
+                                                                <div class="row d-flex">
+                                                                    <div class="user-image text-lg-start ps-3 col-2 px-0">
+                                                                        <img src="assets/images/testimonial-1.png" class="rounded-circle" width="40">
+                                                                    </div>
+                                                                    <h3 class="col-9 d-flex align-items-center fw-bold slightly-larger-font">Laura Russell</h3>
+                                                                </div>
+                                                                <div class="user-content">
+                                                                    <p class="text-start fst-italic pt-3">Thanks a lot for the quick response. i was really impressed, your solution is excellent!! Your competence is justified!</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 px-0">
+                                                            <div class="card text-center">
+                                                                <div class="row d-flex">
+                                                                    <div class="user-image text-lg-start ps-3 col-2 px-0">
+                                                                        <img src="assets/images/testimonial-2.png" class="rounded-circle" width="40">
+                                                                    </div>
+                                                                    <h3 class="col-9 d-flex align-items-center fw-bold slightly-larger-font">Richard Santos</h3>
+                                                                </div>
+                                                                <div class="user-content">
+                                                                    <p class="text-start fst-italic pt-3">I just don't know how to describe your services... They are extraordinary! I am quire happy with them! Just keep up going this way!</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 px-0">
+                                                            <div class="card text-center">
+                                                                <div class="row d-flex">
+                                                                    <div class="user-image text-lg-start ps-3 col-2 px-0">
+                                                                        <img src="assets/images/testimonial-3.png" class="rounded-circle" width="40">
+                                                                    </div>
+                                                                    <h3 class="col-9 d-flex align-items-center fw-bold slightly-larger-font">Dylan Medina</h3>
+                                                                </div>
+                                                                <div class="user-content">
+                                                                    <p class="text-start fst-italic pt-3">Thank you very much. I’m impressed with your service. I’ve already told my friends about your company and your quick response, thanks again!</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="col-12">
+                                            <div class="card mb-5">
+                                                <div class="container mt-5 mb-5">
+                                                    <div class="row">
+                                                        <div class="col-md-4 px-0">
+                                                            <div class="card text-center">
+                                                                <div class="row d-flex">
+                                                                    <div class="user-image text-lg-start ps-3 col-2 px-0">
+                                                                        <img src="assets/images/testimonial-1.png" class="rounded-circle" width="40">
+                                                                    </div>
+                                                                    <h3 class="col-9 d-flex align-items-center fw-bold slightly-larger-font">Laura Russell</h3>
+                                                                </div>
+                                                                <div class="user-content">
+                                                                    <p class="text-start fst-italic pt-3">Thanks a lot for the quick response. i was really impressed, your solution is excellent!! Your competence is justified!</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 px-0">
+                                                            <div class="card text-center">
+                                                                <div class="row d-flex">
+                                                                    <div class="user-image text-lg-start ps-3 col-2 px-0">
+                                                                        <img src="assets/images/testimonial-2.png" class="rounded-circle" width="40">
+                                                                    </div>
+                                                                    <h3 class="col-9 d-flex align-items-center fw-bold slightly-larger-font">Richard Santos</h3>
+                                                                </div>
+                                                                <div class="user-content">
+                                                                    <p class="text-start fst-italic pt-3">I just don't know how to describe your services... They are extraordinary! I am quire happy with them! Just keep up going this way!</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 px-0">
+                                                            <div class="card text-center">
+                                                                <div class="row d-flex">
+                                                                    <div class="user-image text-lg-start ps-3 col-2 px-0">
+                                                                        <img src="assets/images/testimonial-3.png" class="rounded-circle" width="40">
+                                                                    </div>
+                                                                    <h3 class="col-9 d-flex align-items-center fw-bold slightly-larger-font">Dylan Medina</h3>
+                                                                </div>
+                                                                <div class="user-content">
+                                                                    <p class="text-start fst-italic pt-3">Thank you very much. I’m impressed with your service. I’ve already told my friends about your company and your quick response, thanks again!</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Section -->
+                        </section>
+                    </div>
+                </div>
+                <footer>
+                    <div  class="footer-container d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="col-md-4 px-4">
+                            <div class="col d-flex align-items-start px-lg-5">
+                                <img src="assets/images/footer-icon-left.png" class="img-fluid me-2 align-self-center mb-lg-1" alt="logo">
+                                <div>
+                                    <p class="logo-text mb-0 ">Super</p>
+                                    <p class="logo-text mt-0 small-line-height">Real Estate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="col-md-4 mb-0 text-center sub-text mx-auto">© 2016 All Rights Reserved Terms of Use and Privacy Policy</p>
+                        <ul class="nav col-md-4 justify-content-end px-lg-5 mx-auto">
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-brands fa-vimeo-v"></i></a></li>
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-brands fa-google"></i></a></li>
+                            <li class="nav-item"><a href="#" class="px-2"><i class="fa-solid fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                </footer>
+                <!-- </div> -->
+            </div>
+            </div>
+        </main>
+    </body>
+    <!-- Scripts -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>

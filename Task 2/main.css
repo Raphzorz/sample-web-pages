@@ -1,0 +1,22 @@
+.container {
+  max-width: 960px;
+}
+
+// Probably overkill
+.circle {
+  position: relative;
+  background: #8cc63e;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.checkmark {
+  position: absolute;
+  transform: rotate(45deg) translate(-50%, -50%);
+  left: 35%;
+  top: 45%;
+  height: 50px;
+  width: 25px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+}
